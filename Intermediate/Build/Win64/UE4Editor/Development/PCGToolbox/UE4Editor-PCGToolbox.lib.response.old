@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-PCGToolbox.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\kb\Documents\Unreal Projects\PluginBase\Intermediate\Build\Win64\PluginBaseEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\kb\Documents\Unreal Projects\PluginBase\Plugins\PCGToolbox\Intermediate\Build\Win64\UE4Editor\Development\PCGToolbox\PCGToolbox.cpp.obj"
+"C:\Users\kb\Documents\Unreal Projects\PluginBase\Plugins\PCGToolbox\Intermediate\Build\Win64\UE4Editor\Development\PCGToolbox\Default.rc2.res"
+/OUT:"C:\Users\kb\Documents\Unreal Projects\PluginBase\Plugins\PCGToolbox\Intermediate\Build\Win64\UE4Editor\Development\PCGToolbox\UE4Editor-PCGToolbox.lib"
+/INCLUDE:IMPLEMENT_MODULE_PCGToolbox

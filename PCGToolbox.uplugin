@@ -1,0 +1,25 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "PCGToolbox",
+	"Description": "Some PCG stuff.",
+	"Category": "Procedural Content Generation",
+	"CreatedBy": "kb",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": false,
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "PCGToolbox",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
