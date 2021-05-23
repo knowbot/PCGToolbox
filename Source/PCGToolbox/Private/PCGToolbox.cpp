@@ -1,7 +1,7 @@
+#include "PCGToolbox.h"
 #include "PCGToolboxPrivatePCH.h"
 #include "Core.h"
 #include "Modules/ModuleManager.h"
-#include "PCGToolbox.h"
 
 #define LOCTEXT_NAMESPACE "FPCGToolboxModule"
 

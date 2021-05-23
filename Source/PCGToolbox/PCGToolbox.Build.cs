@@ -24,7 +24,7 @@ namespace UnrealBuildTool.Rules {
             PrivateDependencyModuleNames.AddRange (new string[] { "CoreUObject", "Engine", "Slate", "SlateCore" });
 
             // Start CGAL linking here!
-            bool isLibrarySupported = false;
+            bool isCGALSupported = false;
 
             // Create CGAL Path
             string CGALPath = Path.Combine (ThirdPartyPath, "CGAL");
@@ -32,17 +32,17 @@ namespace UnrealBuildTool.Rules {
             // Get Library Path
             string LibPath = "";
             if (Target.Platform == UnrealTargetPlatform.Win64) {
-                LibPath = Path.Combine (CGALPath, "libraries");
-                isLibrarySupported = true;
+                LibPath = Path.Combine (CGALPath, "lib");
+                isCGALSupported = true;
             } else {
                 string Err = string.Format ("{0} dedicated server is made to depend on {1}. We want to avoid this, please correct module dependencies.", Target.Platform.ToString (), this.ToString ());
                 System.Console.WriteLine (Err);
             }
 
-            if (isLibrarySupported) {
+            if (isCGALSupported) {
                 //Add Include path
-                PublicIncludePaths.AddRange (new string[] { Path.Combine (CGALPath, "includes") });
-                PublicIncludePaths.AddRange (new string[] { Path.Combine (CGALPath, "includes", "auxiliary") }); //Dependencies
+                PublicIncludePaths.AddRange (new string[] { Path.Combine (CGALPath, "include") });
+                PublicIncludePaths.AddRange (new string[] { Path.Combine (CGALPath, "include", "auxiliary") }); //Dependencies
 
                 // Add Library Path
                 // PublicAdditionalLibraries.Add (LibPath);
@@ -52,11 +52,45 @@ namespace UnrealBuildTool.Rules {
                 PublicAdditionalLibraries.Add (Path.Combine (LibPath, "libmpfr-4.lib"));
                 PublicDelayLoadDLLs.Add ("libgmp-10.dll");
                 PublicDelayLoadDLLs.Add ("libmpfr-4.dll");
-                RuntimeDependencies.Add (new RuntimeDependency (LibPath + "/libgmp-10.dll"));
-                RuntimeDependencies.Add (new RuntimeDependency (LibPath + "/libmpfr-4.dll"));
+                RuntimeDependencies.Add (Path.Combine (LibPath, "libgmp-10.dll"));
+                RuntimeDependencies.Add (Path.Combine (LibPath, "libmpfr-4.dll"));
             }
 
-            PublicDefinitions.Add (string.Format ("WITH_CGAL_BINDING={0}", isLibrarySupported ? 1 : 0));
+            PublicDefinitions.Add (string.Format ("WITH_CGAL_BINDING={0}", isCGALSupported ? 1 : 0));
+
+            // Start CGAL linking here!
+            bool isFastNoiseSupported = false;
+
+            // Create CGAL Path
+            string FastNoisePath = Path.Combine (ThirdPartyPath, "FastNoise2");
+
+            // Get Library Path
+            string BinPath = "";
+            if (Target.Platform == UnrealTargetPlatform.Win64) {
+                LibPath = Path.Combine (FastNoisePath, "lib");
+                BinPath = Path.Combine (FastNoisePath, "bin");
+                isFastNoiseSupported = true;
+            } else {
+                string Err = string.Format ("{0} dedicated server is made to depend on {1}. We want to avoid this, please correct module dependencies.", Target.Platform.ToString (), this.ToString ());
+                System.Console.WriteLine (Err);
+            }
+
+            if (isCGALSupported) {
+                //Add Include path
+                PublicIncludePaths.AddRange (new string[] { Path.Combine (FastNoisePath, "include") });
+
+                // Add Library Path
+                // PublicAdditionalLibraries.Add (LibPath);
+
+                //Add Static Libraries
+                PublicAdditionalLibraries.Add (Path.Combine (LibPath, "FastNoise.lib"));
+                PublicDelayLoadDLLs.Add ("FastNoise.dll");
+                PublicDelayLoadDLLs.Add ("SDL2.dll");
+                RuntimeDependencies.Add (Path.Combine (BinPath, "FastNoise.dll"));
+                RuntimeDependencies.Add (Path.Combine (BinPath, "/SDL2.dll"));
+            }
+
+            PublicDefinitions.Add (string.Format ("WITH_FASTNOISE_BINDING={0}", isFastNoiseSupported ? 1 : 0));
         }
     }
 }

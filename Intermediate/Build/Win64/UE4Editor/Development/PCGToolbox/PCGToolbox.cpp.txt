@@ -1,6 +1,6 @@
 C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Intermediate\Build\Win64\UE4Editor\Development\PCGToolbox\Definitions.PCGToolbox.h
-C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\PCGToolbox\Private\PCGToolboxPrivatePCH.h
 C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\PCGToolbox\Public\PCGToolbox.h
+C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\PCGToolbox\Private\PCGToolboxPrivatePCH.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\Core.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\GenericPlatform/GenericPlatformNamedPipe.h

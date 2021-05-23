@@ -232,8 +232,9 @@
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
 /I "C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source"
-/I "C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\ThirdParty\CGAL\includes"
-/I "C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\ThirdParty\CGAL\includes\auxiliary"
+/I "C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\ThirdParty\CGAL\include"
+/I "C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\ThirdParty\CGAL\include\auxiliary"
+/I "C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\ThirdParty\FastNoise2\include"
 /I "C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\PCGToolbox\Public"
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
