@@ -68,7 +68,6 @@ namespace UnrealBuildTool.Rules {
             string BinPath = "";
             if (Target.Platform == UnrealTargetPlatform.Win64) {
                 LibPath = Path.Combine (FastNoisePath, "lib");
-                BinPath = Path.Combine (FastNoisePath, "bin");
                 isFastNoiseSupported = true;
             } else {
                 string Err = string.Format ("{0} dedicated server is made to depend on {1}. We want to avoid this, please correct module dependencies.", Target.Platform.ToString (), this.ToString ());
@@ -85,9 +84,7 @@ namespace UnrealBuildTool.Rules {
                 //Add Static Libraries
                 PublicAdditionalLibraries.Add (Path.Combine (LibPath, "FastNoise.lib"));
                 PublicDelayLoadDLLs.Add ("FastNoise.dll");
-                PublicDelayLoadDLLs.Add ("SDL2.dll");
-                RuntimeDependencies.Add (Path.Combine (BinPath, "FastNoise.dll"));
-                RuntimeDependencies.Add (Path.Combine (BinPath, "/SDL2.dll"));
+                RuntimeDependencies.Add (Path.Combine (LibPath, "FastNoise.dll"));
             }
 
             PublicDefinitions.Add (string.Format ("WITH_FASTNOISE_BINDING={0}", isFastNoiseSupported ? 1 : 0));

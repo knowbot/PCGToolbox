@@ -19,7 +19,6 @@
 /DELAYLOAD:"libgmp-10.dll"
 /DELAYLOAD:"libmpfr-4.dll"
 /DELAYLOAD:"FastNoise.dll"
-/DELAYLOAD:"SDL2.dll"
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
 /LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\lib\x64"

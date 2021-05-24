@@ -18,6 +18,8 @@
 /ignore:4099
 /DELAYLOAD:"libgmp-10.dll"
 /DELAYLOAD:"libmpfr-4.dll"
+/DELAYLOAD:"FastNoise.dll"
+/DELAYLOAD:"SDL2.dll"
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
 /LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\lib\x64"
@@ -35,11 +37,12 @@
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
-"C:\Users\kb\Documents\Unreal Projects\PluginBase\Intermediate\Build\Win64\PluginBaseEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"C:\Users\kb\Documents\Unreal Projects\PluginBase\Plugins\PCGToolbox\Intermediate\Build\Win64\UE4Editor\Development\PCGToolbox\PCGToolbox.cpp.obj"
-"C:\Users\kb\Documents\Unreal Projects\PluginBase\Plugins\PCGToolbox\Intermediate\Build\Win64\UE4Editor\Development\PCGToolbox\Default.rc2.res"
-"C:\Users\kb\Documents\Unreal Projects\PluginBase\Plugins\PCGToolbox\Source\ThirdParty\CGAL\libraries\libgmp-10.lib"
-"C:\Users\kb\Documents\Unreal Projects\PluginBase\Plugins\PCGToolbox\Source\ThirdParty\CGAL\libraries\libmpfr-4.lib"
+"C:\Users\kb\Documents\Unreal Projects\PCG_tests\Intermediate\Build\Win64\PCG_testsEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Intermediate\Build\Win64\UE4Editor\Development\PCGToolbox\PCGToolbox.cpp.obj"
+"C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Intermediate\Build\Win64\UE4Editor\Development\PCGToolbox\Default.rc2.res"
+"C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\ThirdParty\CGAL\lib\libgmp-10.lib"
+"C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\ThirdParty\CGAL\lib\libmpfr-4.lib"
+"C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Source\ThirdParty\FastNoise2\lib\FastNoise.lib"
 "C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
 "C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
 "C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Development\Slate\UE4Editor-Slate.lib"
@@ -69,8 +72,8 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"C:\Users\kb\Documents\Unreal Projects\PluginBase\Plugins\PCGToolbox\Binaries\Win64\UE4Editor-PCGToolbox.dll"
-/IMPLIB:"C:\Users\kb\Documents\Unreal Projects\PluginBase\Plugins\PCGToolbox\Intermediate\Build\Win64\UE4Editor\Development\PCGToolbox\UE4Editor-PCGToolbox.suppressed.lib"
-/PDB:"C:\Users\kb\Documents\Unreal Projects\PluginBase\Plugins\PCGToolbox\Binaries\Win64\UE4Editor-PCGToolbox.pdb"
+/OUT:"C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Binaries\Win64\UE4Editor-PCGToolbox.dll"
+/IMPLIB:"C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Intermediate\Build\Win64\UE4Editor\Development\PCGToolbox\UE4Editor-PCGToolbox.suppressed.lib"
+/PDB:"C:\Users\kb\Documents\Unreal Projects\PCG_tests\Plugins\PCGToolbox\Binaries\Win64\UE4Editor-PCGToolbox.pdb"
 /ignore:4078
 /INCLUDE:IMPLEMENT_MODULE_PCGToolbox
