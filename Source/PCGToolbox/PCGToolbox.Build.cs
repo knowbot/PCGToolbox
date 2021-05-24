@@ -23,13 +23,8 @@ namespace UnrealBuildTool.Rules {
             PublicDependencyModuleNames.AddRange (new string[] { "Core" });
             PrivateDependencyModuleNames.AddRange (new string[] { "CoreUObject", "Engine", "Slate", "SlateCore" });
 
-            // Start CGAL linking here!
             bool isCGALSupported = false;
-
-            // Create CGAL Path
             string CGALPath = Path.Combine (ThirdPartyPath, "CGAL");
-
-            // Get Library Path
             string LibPath = "";
             if (Target.Platform == UnrealTargetPlatform.Win64) {
                 LibPath = Path.Combine (CGALPath, "lib");
@@ -40,14 +35,11 @@ namespace UnrealBuildTool.Rules {
             }
 
             if (isCGALSupported) {
-                //Add Include path
+                //Include path
                 PublicIncludePaths.AddRange (new string[] { Path.Combine (CGALPath, "include") });
                 PublicIncludePaths.AddRange (new string[] { Path.Combine (CGALPath, "include", "auxiliary") }); //Dependencies
 
-                // Add Library Path
-                // PublicAdditionalLibraries.Add (LibPath);
-
-                //Add Static Libraries
+                //Static lib path
                 PublicAdditionalLibraries.Add (Path.Combine (LibPath, "libgmp-10.lib"));
                 PublicAdditionalLibraries.Add (Path.Combine (LibPath, "libmpfr-4.lib"));
                 PublicDelayLoadDLLs.Add ("libgmp-10.dll");
@@ -58,14 +50,8 @@ namespace UnrealBuildTool.Rules {
 
             PublicDefinitions.Add (string.Format ("WITH_CGAL_BINDING={0}", isCGALSupported ? 1 : 0));
 
-            // Start CGAL linking here!
             bool isFastNoiseSupported = false;
-
-            // Create CGAL Path
             string FastNoisePath = Path.Combine (ThirdPartyPath, "FastNoise2");
-
-            // Get Library Path
-            string BinPath = "";
             if (Target.Platform == UnrealTargetPlatform.Win64) {
                 LibPath = Path.Combine (FastNoisePath, "lib");
                 isFastNoiseSupported = true;
@@ -74,14 +60,8 @@ namespace UnrealBuildTool.Rules {
                 System.Console.WriteLine (Err);
             }
 
-            if (isCGALSupported) {
-                //Add Include path
+            if (isFastNoiseSupported) {
                 PublicIncludePaths.AddRange (new string[] { Path.Combine (FastNoisePath, "include") });
-
-                // Add Library Path
-                // PublicAdditionalLibraries.Add (LibPath);
-
-                //Add Static Libraries
                 PublicAdditionalLibraries.Add (Path.Combine (LibPath, "FastNoise.lib"));
                 PublicDelayLoadDLLs.Add ("FastNoise.dll");
                 RuntimeDependencies.Add (Path.Combine (LibPath, "FastNoise.dll"));
